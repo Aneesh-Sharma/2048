@@ -1,0 +1,28 @@
+.box{
+    width: 25%;
+    height: 25%;
+    text-align: center;
+    margin-left: 3%;
+    margin-top: 3%;
+    width: 21%;
+    height: 21%;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.flex-box{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    font-weight: bold;
+    color: #776E65;
+    font-size: 43px;
+    background: rgba(238, 228, 218, 0.35);
+}
+
+
+
+
+
+

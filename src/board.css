@@ -1,0 +1,11 @@
+.board{
+    margin: 10px;
+    max-height: 480px;
+    height: 480px;
+    background: #bbada0;
+    border-radius: 6px;
+    height: calc(100vw - 20px);
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
