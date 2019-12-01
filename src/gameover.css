@@ -1,0 +1,24 @@
+.game-over{
+    background: rgba(238, 228, 218, 0.5);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left:0;
+    right:0;
+    padding-top: 35vh;
+    text-align: center;
+}
+.try-again{
+    background: #8f7a66;;
+    border-radius: 3px;
+    padding: 10px 20px;
+    display: inline-block;
+    color: #f9f6f2;
+    text-align: center;
+    cursor: pointer;
+}
+.label{
+    color:#776E65;
+    font-size: 30px;
+    margin-bottom: 30px;
+}

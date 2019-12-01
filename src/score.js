@@ -11,11 +11,11 @@ class Score extends Component {
         <div className="score">
             <div className="score-box">
                 <div className="score-heading">score</div>
-                <div className="score-val">12</div>
+                <div className="score-val">{this.props.score}</div>
             </div>
             <div className="score-box">
                 <div className="score-heading">best</div>
-                <div className="score-val">322</div>
+                <div className="score-val">{this.props.best}</div>
             </div>
         </div>
         <div className="rule">
