@@ -236,6 +236,10 @@ class App extends Component {
         this.moveUp();
       }
     }
+    this.startx = null;
+    this.starty = null;
+    this.endy = null;
+    this.endx = null;
    }
 
   newStart=()=>{
