@@ -257,7 +257,7 @@ class App extends Component {
     let i,j;
     let empty = false, blank=false; 
     for(i=0;i<nums.length;i++){
-      if(!nums[i] || ((nums[i]==nums[i+1])&&i!=3&&i!=7&&i!=11) || nums[i]==nums[i]+4){
+      if(!nums[i] || ((nums[i]==nums[i+1])&&i!=3&&i!=7&&i!=11) || nums[i]==nums[i+4]){
         empty= true;
       }
       if(!nums[i]){
