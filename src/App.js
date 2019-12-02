@@ -201,6 +201,40 @@ class App extends Component {
     this.ref.current.focus();
   }
 
+  handleTouchStart=(e)=>{
+    if(!e.touches.length){
+      return ;
+    }
+   this.startx = e.touches[0].clientX;
+   this.starty = e.touches[0].clientY;
+   this.touch = true;
+  }
+
+  handleTouchMove=(e)=>{
+    if(!e.touches.length){
+      return ;
+    }
+    this.endx = e.touches[0].clientX;
+    this.endy = e.touches[0].clientY;
+    this.touch = true;
+   }
+
+   handleTouchEnd=(e)=>{
+    if(Math.abs(this.startx-this.endx)>Math.abs(this.starty-this.endy)){
+      if(this.startx<this.endx){
+        this.moveRight();
+      }else{
+        this.moveLeft();
+      }
+    }else{
+      if(this.starty<this.endy){
+        this.moveDown();
+      }else{
+        this.moveUp();
+      }
+    }
+   }
+
   newStart=()=>{
     let nums=[];
     for(let i=0;i<16;i++){
@@ -233,7 +267,7 @@ class App extends Component {
   
   render() {
     return (
-      <div id="App" className="App" {...ArrowKeysReact.events} tabIndex="1" ref={this.ref}>
+      <div id="App" className="App" {...ArrowKeysReact.events} tabIndex="1" ref={this.ref} onTouchStart={e=>{this.handleTouchStart(e)}} onTouchMove={e=>{this.handleTouchMove(e)}} onTouchEnd={e=>{this.handleTouchEnd(e)}}>
         {this.state.gameOver ? <GameOver start={this.newStart}/> : ""}
         <Score newStart={this.newStart} score={this.state.score} best={this.state.best}/>
         <Board val={this.state.nums}/>
