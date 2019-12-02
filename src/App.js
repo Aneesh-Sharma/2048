@@ -255,14 +255,20 @@ class App extends Component {
     let nums = this.state.nums;
     let rno = Math.round(Math.random() * 15);
     let i,j;
-    let empty = false; 
+    let empty = false, blank=false; 
     for(i=0;i<nums.length;i++){
       if(!nums[i] || ((nums[i]==nums[i+1])&&i!=3&&i!=7&&i!=11) || nums[i]==nums[i]+4){
         empty= true;
       }
+      if(!nums[i]){
+        blank = true;
+      }
     }
     if(!empty){
       this.setState({gameOver: true});
+      return;
+    }
+    if(!blank){
       return;
     }
     while(nums[rno]){
