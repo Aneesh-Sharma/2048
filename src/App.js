@@ -220,6 +220,9 @@ class App extends Component {
    }
 
    handleTouchEnd=(e)=>{
+     if(this.startx == null || this.starty == null || this.endx == null || this.endy == null ){
+      return;
+     }
     if(Math.abs(this.startx-this.endx)>Math.abs(this.starty-this.endy)){
       if(this.startx<this.endx){
         this.moveRight();
